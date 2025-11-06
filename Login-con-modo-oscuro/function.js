@@ -26,3 +26,6 @@ const scrollbind = el => el.bind("scroll", function(){ //función para sincroniz
    $(".container").scrollTop(scroll); 
 });
 scrollbind($(".container")); */
+
+
+// Este es el script, esta comentado para aun no darle función 
