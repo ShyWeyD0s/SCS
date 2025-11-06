@@ -383,6 +383,7 @@ body {
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border: 3px linear-gradient(to left , #b2ff8e, #00bc10);
   border-radius: 10px;
+
 }
 
 .login-box h2 {
@@ -426,6 +427,7 @@ body {
   left: 0;
   color: #03d314;
   font-size: 12px;
+  border: 1px solid #03d314 ;
 }
 
 .login-box form a {
@@ -493,4 +495,7 @@ body {
   color: #e8fcebbd;
 }
 
-
+.link {
+color: rgba(255, 255, 255, 0.747);
+text-shadow: #00bc10;
+}
