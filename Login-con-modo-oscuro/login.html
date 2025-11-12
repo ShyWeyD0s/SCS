@@ -1,11 +1,33 @@
-@charset "UTF-8";
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
+  <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.2/css/all.css'>
+  <link rel='stylesheet' href='style.css'>
+</head>
+<body>
+ 
+<div id="container" class="container">
+ <div class="header card">
+ <div class="section-width">
+ </div>
+ </div>
+<div class="clip"></div>
+ 
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script  src="function.js"></script>
+ 
+<style>
+	@charset "UTF-8";
 body {
   font-family: 'Big Shoulders Text', cursive;
+  
 }
 .clip {
   z-index: 2;
   position: fixed;
-  bottom: 3rem;
+  bottom: 85%;
   left: 3rem;
   width: 0rem;
   height: 0rem;
@@ -17,7 +39,7 @@ body {
 }
 @-webkit-keyframes open {
   0% {
-    bottom: 3rem;
+    bottom: 85%;
     left: 3rem;
     width: 0rem;
     height: 0rem;
@@ -35,7 +57,7 @@ body {
 }
 @keyframes open {
   0% {
-    bottom: 3rem;
+    bottom: 85%;
     left: 3rem;
     width: 0rem;
     height: 0rem;
@@ -64,26 +86,27 @@ body {
   background: var(--background);
   color: var(--color);
 }
-.container:not(.dark) {
-  --background: #fcfbfe;
-  --color:#323133;
-  --sectionBackground: #ffffff;
-  --borderColor: #e9e9e9;
-  --text1:#323133;
-  --text2:#3C3B3D;
-  --shadow:rgba(0,0,0,0.1);
-  --iconColor:#0fce3d;
-}
-.container.dark {
-  --background: #1C1B20;
+.container:not(.dark) { /*Light Mode, and navbar */
+  --background: #1c1b2075;
   --color:#F5F7FA;
-  --sectionBackground: #222126;
-  --borderColor: #252429;
+  --sectionBackground: #1c1b2057;
+  --borderColor: #0000006e;
   --text1:#F5F7FA;
   --text2:#E6E9ED;
-  --shadow:rgba(0,0,0,0.1);
-  --iconColor:#05c534;
+  --shadow:#1C1B20;
+  --iconColor:#02d914;
 }
+/*.container.dark { Dark Mode, and darkmode navbar 
+  --background: #1C1B20;
+  --color:#F5F7FA;
+  --sectionBackground: #1C1B20;
+  --borderColor: #1C1B20;
+  --text1:#F5F7FA;
+  --text2:#E6E9ED;
+  --shadow:#1C1B20;
+  --iconColor:#02d914;
+} */
+
 .container *[class*="card"] {
   background: var(--sectionBackground);
   color: var(--text1);
@@ -94,7 +117,7 @@ body {
 }
 .container .darkmode {
   position: fixed;
-  bottom: 1rem;
+  bottom: 77%;
   left: 1rem;
   font-size: 1.75rem;
   padding: 1rem;
@@ -216,18 +239,56 @@ body iframe {
   bottom: 9px;
   right: 25px !important;
 }
-body .container .page .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.75rem;
-  color: var(--text2);
-  background-color: #cdffa3;
-}
-
+</style>
+<div class="login-box">
+  <h2>SENA</h2>
+  <h2>Bienvenido al CCyS</h2>
+  <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png?rev=40" class="logosena" alt="Logo SENA">
+  <br>
+  <h2>Iniciar Sesión</h2>
+  <form>
+    <div class="user-box">
+      <input type="text" name="" required="">
+      <label>Usuario</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="">
+      <label>Contraseña</label>
+    </div>
+    <a href="#" type="">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Ingresar
+    </a>
+  </form>
+  <br>
+  <div style="text-align: center;">
+    <p class="texto">¿No estas registrado?</p> <a class="link" href="/Login-con-modo-oscuro/register.html">¡Registrate aqui!</a></p>
+    <p class="texto">¿Olvidaste tu contraseña?</p> <a class="link" href="/Login-con-modo-oscuro/password.html">Recuperar Contraseña</a></p>
+  </div>
+  <div style="text-align: center;">
+  <p class="texto">Otros metodos de inicio de sesiòn:</p>
+  <form>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      HUELLA 
+    </a>
+    </form>
+  </div>
+</div>
+<br>
+<footer>
+  <div class="footer-end">
+    <p>© 20xx SENA & SCS.</p>
+    <p>Todos los derechos reservados.</p>
+  </div>
+</footer>
+<style>
  html {
   height: 100%;
 }
@@ -235,24 +296,39 @@ body {
   margin:0;
   padding:0;
   font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
+  background: #000000e5;
 }
 
-.login-box { /*Adjust size*/
+.login-box { /*Adjust size, login container*/
   position: absolute;
   text-align: center;
   top: 65%;
   left: 50%;
-  width: 400px;
-  height: 940px;
-  padding: 82px;
+  width: 90vw;
+  max-width: 445px;
+  min-width: 280px;
+  height: auto;
+  min-height: 400px;
+  padding: 32px 16px;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.442);
+  background: #4e4e4e65;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border: 3px linear-gradient(to left , #b2ff8e, #00bc10);
+  border: 3px solid #aad1aa33;
   border-radius: 10px;
 }
+
+@media (max-width: 600px) { 
+  .login-box {
+    width: 98vw;
+    max-width: 98vw;
+    min-width: 100px;
+    padding: 16px 4px;
+    top: 55%;
+    height: auto;
+  }
+}
+
 
 .login-box h2 {
   margin: 0 0 30px;
@@ -293,7 +369,7 @@ body {
 .login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #03d314;
+  color: #ffffffa9;
   font-size: 12px;
 }
 
@@ -309,10 +385,13 @@ body {
   transition: .5s;
   margin-top: 40px;
   letter-spacing: 4px;
+  border-radius:10px;
+  border: 2px solid #02d914b9;
+  
 }
 
 .login-box a:hover { /*hover box effect*/
-  background: #cdffa3; 
+  background: #02d914; 
   color: #fff;
   border-radius: 5px;
   box-shadow: 0 0 5px #02e915,
@@ -331,12 +410,10 @@ body {
   left: -100%;
   width: 100%;
   height: 8px;
-  background: linear-gradient(90deg, transparent, #cdffa3);
+  background: linear-gradient(90deg, transparent, #9cff4b);
   animation: btn-anim1 5s linear infinite;
   animation: reverse btn-anim1 5s  reverse infinite;
 }
-
-
 .texto {
   text-align: center;
   color:#ffffff;
@@ -359,150 +436,6 @@ body {
   font-size: 0.95rem;
   color: #e8fcebbd;
 }
- html {
-  height: 100%;
-}
-body {
-  margin:0;
-  padding:0;
-  font-family: sans-serif;
-  background: linear-gradient(#141e30, #243b55);
-}
-
-.login-box { /*Adjust size*/
-  position: absolute;
-  text-align: center;
-  top: 65%;
-  left: 50%;
-  width: 400px;
-  height: 940px;
-  padding: 82px;
-  transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.442);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border: 3px linear-gradient(to left , #b2ff8e, #00bc10);
-  border-radius: 10px;
-
-}
-
-.login-box h2 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: #ffffff;
-  text-align: center;
-}
-
-.login-box .user-box {
-  position: relative;
-}
-
-.login-box .user-box input { /*box login data*/
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
-
-}
-.login-box .user-box label { /*label login*/
-  position: absolute;
-  top:0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: #fff;
-  pointer-events: none;
-  transition: .5s;
-
-}
-
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
-  top: -20px;
-  left: 0;
-  color: #03d314;
-  font-size: 12px;
-  border: 1px solid #03d314 ;
-}
-
-.login-box form a {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #ffffff;
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: .5s;
-  margin-top: 40px;
-  letter-spacing: 4px
-
-}
-
-.login-box a:hover { /*hover box effect*/
-  background: #cdffa3; 
-  color: #fff;
-  border: #00bc10 solid 2px;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #02e915,
-              0 0 25px #00d812,
-              0 0 50px #00eb14,
-              0 0 100px #00d612;
-}
-
-.login-box a span {
-  position: absolute;
-  display: block;
-}
-
-.login-box a span:nth-child(1) { /*hover animation*/
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(90deg, transparent, #cdffa3);
-  animation: btn-anim1 5s linear infinite;
-  animation: reverse btn-anim1 5s  reverse infinite;
-}
-
-
-.texto {
-  text-align: center;
-  color:#ffffff;
-}
-
-.logosena {
-  width: 100px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  
-}
-.footer-end {
-  position: absolute;
-  bottom: -45%;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.95rem;
-  color: #e8fcebbd;
-}
-
-.link {
-color: rgba(255, 255, 255, 0.623);
-text-shadow: #00bc10;
-
-}
-
-footer {
-
-  display: hide;
-}
-
+</style>
+</body>
+</html>

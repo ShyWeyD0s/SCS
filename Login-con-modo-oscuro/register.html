@@ -241,50 +241,62 @@ body iframe {
 }
 </style>
 <div class="login-box">
-  <h2>SENA</h2>
-  <h2>Bienvenido al CCyS</h2>
+  <h2>SENA ACCESS</h2>
+  <h2>Registro</h2>
   <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png?rev=40" class="logosena" alt="Logo SENA">
   <br>
-  <h2>Iniciar Sesión</h2>
+  <h2>Por favor, llene correctamente los siguientes datos</h2>
   <form>
     <div class="user-box">
       <input type="text" name="" required="">
-      <label>Usuario</label>
+      <label>Nombres: </label>
     </div>
     <div class="user-box">
-      <input type="password" name="" required="">
-      <label>Contraseña</label>
+      <input type="text" name="" required="">
+      <label>Apellidos: </label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required="">
+      <label>Numero de identificación:</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required="">
+      <label>Correo electrónico: </label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="" placeholder="Debe contener al menos un dígito, una minuscula y un carácter especial.">
+      <label>Crear contraseña:</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="" placeholder="Las contraseñas deben concidir">
+      <label>Confirmar contraseña:</label>
     </div>
     <a href="#" type="">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-      Ingresar
+      Registrarse
+    </a>
+    <br>
+    <a href="/Login-con-modo-oscuro/login.html" type="">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Iniciar Sesión
     </a>
   </form>
   <br>
-  <div style="text-align: center;">
-    <p class="texto">¿No estas registrado?</p> <a class="link" href="a">¡Registrate aqui!</a></p>
-    <p class="texto">¿Olvidaste tu contraseña?</p> <a class="link" href="/Login-con-modo-oscuro/password.html">Recuperar Contraseña</a></p>
-  </div>
-  <div style="text-align: center;">
-  <p class="texto">Otros metodos de inicio de sesiòn:</p>
-  <form>
-    <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      HUELLA 
-    </a>
-    </form>
   </div>
 </div>
 <br>
-<div class="footer-end">
-  <p>© 20xx SENA-SCS.</p>
-  <p>Todos los derechos reservados.</p>
+<!-- <footer>
+  <div class="footer-end">
+    <p>© 20xx SENA & SCS.</p>
+    <p>Todos los derechos reservados.</p>
+  </div>
+</footer> -->
 <style>
  html {
   height: 100%;
@@ -302,8 +314,8 @@ body {
   top: 65%;
   left: 50%;
   width: 90vw;
-  max-width: 400px;
-  min-width: 280px;
+  max-width: 600px;
+  min-width: 350px;
   height: auto;
   min-height: 400px;
   padding: 32px 16px;
