@@ -5,25 +5,8 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
   <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.2/css/all.css'>
   <link rel='stylesheet' href='style.css'>
-</head>
-<body>
- 
-<div id="container" class="container">
- <div class="header card">
- <div class="section-width">
- </div>
- </div>
-<div class="clip"></div>
- 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script  src="function.js"></script>
- 
-<style>
-	@charset "UTF-8";
-body {
-  font-family: 'Big Shoulders Text', cursive;
-  
-}
+  <style>
+    	@charset "UTF-8";
 .clip {
   z-index: 2;
   position: fixed;
@@ -83,35 +66,9 @@ body {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: var(--background);
-  color: var(--color);
 }
-.container:not(.dark) { /*Light Mode, and navbar */
-  --background: #1c1b2075;
-  --color:#F5F7FA;
-  --sectionBackground: #1c1b2057;
-  --borderColor: #0000006e;
-  --text1:#F5F7FA;
-  --text2:#E6E9ED;
-  --shadow:#1C1B20;
-  --iconColor:#02d914;
-}
-/*.container.dark { Dark Mode, and darkmode navbar 
-  --background: #1C1B20;
-  --color:#F5F7FA;
-  --sectionBackground: #1C1B20;
-  --borderColor: #1C1B20;
-  --text1:#F5F7FA;
-  --text2:#E6E9ED;
-  --shadow:#1C1B20;
-  --iconColor:#02d914;
-} */
 
-.container *[class*="card"] {
-  background: var(--sectionBackground);
-  color: var(--text1);
-  box-shadow: 0 0 1rem -0.25rem var(--shadow);
-}
+
 .container *[class*="card"].inner-card {
   border: 1px solid var(--borderColor);
 }
@@ -225,11 +182,6 @@ body .container .page ul {
   list-style: none;
   padding-left: 1rem;
 }
-body .container .page ul li:before {
-  content: "•";
-  margin-right: 1rem;
-  color: var(--iconColor);
-}
 body .container .page > div[id] {
   position: absolute;
   top: calc(-6rem - 2px);
@@ -239,66 +191,9 @@ body iframe {
   bottom: 9px;
   right: 25px !important;
 }
-</style>
-<div class="login-box">
-  <h2>SENA</h2>
-  <h2>Bienvenido al CCyS</h2>
-  <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png?rev=40" class="logosena" alt="Logo SENA">
-  <br>
-  <h2>Iniciar Sesión</h2>
-  <form>
-    <div class="user-box">
-      <input type="text" name="" required="">
-      <label>Usuario</label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="" required="">
-      <label>Contraseña</label>
-    </div>
-    <a href="#" type="">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Ingresar
-    </a>
-  </form>
-  <br>
-  <div style="text-align: center;">
-    <p class="texto">¿No estas registrado?</p> <a class="link" href="/Login-con-modo-oscuro/register.html">¡Registrate aqui!</a></p>
-    <p class="texto">¿Olvidaste tu contraseña?</p> <a class="link" href="/Login-con-modo-oscuro/password.html">Recuperar Contraseña</a></p>
-  </div>
-  <div style="text-align: center;">
-  <p class="texto">Otros metodos de inicio de sesiòn:</p>
-  <form>
-    <a href="#">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      HUELLA 
-    </a>
-    </form>
-  </div>
-</div>
-<br>
-<footer>
-  <div class="footer-end">
-    <p>© 20xx SENA & SCS.</p>
-    <p>Todos los derechos reservados.</p>
-  </div>
-</footer>
-<style>
- html {
+html {
   height: 100%;
 }
-body {
-  margin:0;
-  padding:0;
-  font-family: sans-serif;
-  background: #000000e5;
-}
-
 .login-box { /*Adjust size, login container*/
   position: absolute;
   text-align: center;
@@ -307,15 +202,17 @@ body {
   width: 90vw;
   max-width: 445px;
   min-width: 280px;
-  height: auto;
+  height: 95vh;
   min-height: 400px;
   padding: 32px 16px;
   transform: translate(-50%, -50%);
-  background: #4e4e4e65;
+  background: #03030327;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border: 3px solid #aad1aa33;
   border-radius: 10px;
+  backdrop-filter: blur(8px); /*efecto blur*/
+  -webkit-backdrop-filter: blur(8px);
 }
 
 @media (max-width: 600px) { 
@@ -414,10 +311,6 @@ body {
   animation: btn-anim1 5s linear infinite;
   animation: reverse btn-anim1 5s  reverse infinite;
 }
-.texto {
-  text-align: center;
-  color:#ffffff;
-}
 
 .logosena {
   width: 100px;
@@ -436,6 +329,64 @@ body {
   font-size: 0.95rem;
   color: #e8fcebbd;
 }
-</style>
+  </style>
+</head>
+<body>
+<div id="container" class="container">
+ <!-- <div class="header card">
+ <div class="section-width">
+ </div>
+ </div> -->
+<div class="clip"></div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script  src="function.js"></script>
+<div class="login-box">
+  <h2>SENA</h2>
+  <h2>Bienvenido al CCyS</h2>
+  <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png?rev=40" class="logosena" alt="Logo SENA">
+  <br>
+  <h2>Iniciar Sesión</h2>
+  <form>
+    <div class="user-box">
+      <input type="text" name="" required="">
+      <label>Usuario</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="">
+      <label>Contraseña</label>
+    </div>
+    <a href="#" type="">
+      <span></span>
+      <span></span>
+      <span></span>
+      Ingresar
+    </a>
+  </form>
+  <br>
+  <div class="texto">
+    <p class="texto">¿No estas registrado?</p> <a class="link" href="/register.html">¡Registrate aqui!</a></p>
+    <p class="texto">¿Olvidaste tu contraseña?</p> <a class="link" href="/password.html">Recuperar Contraseña</a></p>
+    <p class="texto">Otros metodos de inicio de sesiòn:</p>
+  <form>
+    <a href="#">
+      <span></span>
+      <span></span>
+      <span></span>
+      HUELLA 
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    </form>
+  </div>
+</div>
+<br>
+<footer>
+  <div class="footer-end">
+    <p>© 20xx SENA & SCS.</p>
+    <p>Todos los derechos reservados.</p>
+  </div>
+</footer>
 </body>
 </html>

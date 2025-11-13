@@ -5,25 +5,8 @@
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'>
   <link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.10.2/css/all.css'>
   <link rel='stylesheet' href='style.css'>
-</head>
-<body>
- 
-<div id="container" class="container">
- <div class="header card">
- <div class="section-width">
- </div>
- </div>
-<div class="clip"></div>
- 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script  src="function.js"></script>
- 
-<style>
-	@charset "UTF-8";
-body {
-  font-family: 'Big Shoulders Text', cursive;
-  
-}
+  <style>
+       	@charset "UTF-8";
 .clip {
   z-index: 2;
   position: fixed;
@@ -83,35 +66,9 @@ body {
   left: 0px;
   right: 0px;
   bottom: 0px;
-  background: var(--background);
-  color: var(--color);
 }
-.container:not(.dark) { /*Light Mode, and navbar */
-  --background: #1c1b2075;
-  --color:#F5F7FA;
-  --sectionBackground: #1c1b2057;
-  --borderColor: #0000006e;
-  --text1:#F5F7FA;
-  --text2:#E6E9ED;
-  --shadow:#1C1B20;
-  --iconColor:#02d914;
-}
-/*.container.dark { Dark Mode, and darkmode navbar 
-  --background: #1C1B20;
-  --color:#F5F7FA;
-  --sectionBackground: #1C1B20;
-  --borderColor: #1C1B20;
-  --text1:#F5F7FA;
-  --text2:#E6E9ED;
-  --shadow:#1C1B20;
-  --iconColor:#02d914;
-} */
 
-.container *[class*="card"] {
-  background: var(--sectionBackground);
-  color: var(--text1);
-  box-shadow: 0 0 1rem -0.25rem var(--shadow);
-}
+
 .container *[class*="card"].inner-card {
   border: 1px solid var(--borderColor);
 }
@@ -225,11 +182,6 @@ body .container .page ul {
   list-style: none;
   padding-left: 1rem;
 }
-body .container .page ul li:before {
-  content: "•";
-  margin-right: 1rem;
-  color: var(--iconColor);
-}
 body .container .page > div[id] {
   position: absolute;
   top: calc(-6rem - 2px);
@@ -239,92 +191,28 @@ body iframe {
   bottom: 9px;
   right: 25px !important;
 }
-</style>
-<div class="login-box">
-  <h2>SENA ACCESS</h2>
-  <h2>Registro</h2>
-  <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png?rev=40" class="logosena" alt="Logo SENA">
-  <br>
-  <h2>Por favor, llene correctamente los siguientes datos</h2>
-  <form>
-    <div class="user-box">
-      <input type="text" name="" required="">
-      <label>Nombres: </label>
-    </div>
-    <div class="user-box">
-      <input type="text" name="" required="">
-      <label>Apellidos: </label>
-    </div>
-    <div class="user-box">
-      <input type="text" name="" required="">
-      <label>Numero de identificación:</label>
-    </div>
-    <div class="user-box">
-      <input type="text" name="" required="">
-      <label>Correo electrónico: </label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="" required="" placeholder="Debe contener al menos un dígito, una minuscula y un carácter especial.">
-      <label>Crear contraseña:</label>
-    </div>
-    <div class="user-box">
-      <input type="password" name="" required="" placeholder="Las contraseñas deben concidir">
-      <label>Confirmar contraseña:</label>
-    </div>
-    <a href="#" type="">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Registrarse
-    </a>
-    <br>
-    <a href="/Login-con-modo-oscuro/login.html" type="">
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      Iniciar Sesión
-    </a>
-  </form>
-  <br>
-  </div>
-</div>
-<br>
-<!-- <footer>
-  <div class="footer-end">
-    <p>© 20xx SENA & SCS.</p>
-    <p>Todos los derechos reservados.</p>
-  </div>
-</footer> -->
-<style>
- html {
+html {
   height: 100%;
 }
-body {
-  margin:0;
-  padding:0;
-  font-family: sans-serif;
-  background: #000000e5;
-}
-
 .login-box { /*Adjust size, login container*/
   position: absolute;
   text-align: center;
   top: 65%;
   left: 50%;
   width: 90vw;
-  max-width: 600px;
-  min-width: 350px;
-  height: auto;
-  min-height: 400px;
+  max-width: 800px;
+  min-width: 280px;
+  height: 100vh;
+  min-height: 600px;
   padding: 32px 16px;
   transform: translate(-50%, -50%);
-  background: #4e4e4e65;
+  background: #0a0a0a8c;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0,0,0,.6);
   border: 3px solid #aad1aa33;
   border-radius: 10px;
+    backdrop-filter: blur(8px); /*efecto blur*/
+  -webkit-backdrop-filter: blur(8px);
 }
 
 @media (max-width: 600px) { 
@@ -423,10 +311,6 @@ body {
   animation: btn-anim1 5s linear infinite;
   animation: reverse btn-anim1 5s  reverse infinite;
 }
-.texto {
-  text-align: center;
-  color:#ffffff;
-}
 
 .logosena {
   width: 100px;
@@ -445,6 +329,76 @@ body {
   font-size: 0.95rem;
   color: #e8fcebbd;
 }
-</style>
+
+  </style>
+</head>
+<body> 
+<div id="container" class="container">
+ <!-- <div class="header card">
+    <div class="section-width">
+    </div>
+ </div> -->
+<div class="clip"></div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script  src="function.js"></script>
+<div class="login-box">
+  <h2>SENA ACCESS</h2>
+  <h2>Registro</h2>
+  <img src="https://www.sena.edu.co/Style%20Library/alayout/images/logoSena.png?rev=40" class="logosena" alt="Logo SENA">
+  <br>
+  <h2>Por favor, llene correctamente los siguientes datos</h2>
+  <form>
+    <div class="user-box">
+      <input type="text" name="" required="">
+      <label>Nombres: </label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required="">
+      <label>Apellidos: </label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required="">
+      <label>Numero de identificación:</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="" required="">
+      <label>Correo electrónico: </label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="" placeholder="Debe contener al menos un dígito, una minuscula y un carácter especial.">
+      <label>Crear contraseña:</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="" required="" placeholder="Las contraseñas deben concidir">
+      <label>Confirmar contraseña:</label>
+    </div>
+    <a href="#" type="">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Registrarse
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <br>
+    <a href="/login.html" type="">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Iniciar Sesión
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </form>
+  <br>
+  </div>
+</div>
+<br>
 </body>
 </html>
